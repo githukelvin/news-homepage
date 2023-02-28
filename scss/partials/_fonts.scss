@@ -1,0 +1,24 @@
+// The use of this file is to create font-face  as the font are downloaded
+@font-face {
+    // bold
+    font-family: Inter-bold;
+    src: url("../assets/fonts/static/Inter-Bold.ttf");
+   
+}
+@font-face {
+// The extraBold
+    font-family: Inter-Extrabold;
+    src: url("../assets/fonts/static/Inter-ExtraBold.ttf");
+  
+}
+@font-face {
+    // importing the regular font
+        font-family: Inter-regular;
+        src: url("../assets/fonts/static/Inter-regular.ttf");
+}
+@font-face {
+    // importing the regular font
+    font-family: Merri;
+    src: url("../assets/fonts/static/Merriweather-Black.ttf");
+}
+// lets see if we can use them  to test we willuse the extarBold

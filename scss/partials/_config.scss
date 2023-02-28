@@ -1,0 +1,36 @@
+// This file will contain all css to reset the page more of boilerplate css
+// Lets start our watch sass extension
+@use "./_mixins" as *;
+@use "./colors" as *;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+body {
+    background: $Off-white;
+}
+// WE create a container class to control the width of the content
+.container{
+    max-width: 1440px;
+//    Just use max-width
+    // We can use  this or  we achieve the same
+    margin-inline:auto;
+}
+// lets use a global variable
+.all{
+    // Now we use the width here
+    width: 80%;
+    // we add margin-inline
+    padding-inline: 1.3em;
+    margin-inline:auto;
+    @include responsiveness(375px) {
+        padding-inline: 0;
+        width: 94%;
+    margin-inline: auto;
+        }
+}

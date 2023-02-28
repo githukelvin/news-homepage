@@ -1,0 +1,17 @@
+@mixin display{
+    display: grid;
+    // width: 100%; //by adding this we destroyed our layout lets remove it
+    grid-auto-flow: column;
+
+}
+// now  it matches our design
+@mixin dispflex{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin responsiveness($breakpoint){
+    @media screen and (max-width: $breakpoint){
+        @content;
+    }
+}

@@ -1,0 +1,215 @@
+@forward "./partials/" ;
+@use "./partials/colors" as *;
+@use "./partials/fonts" as *;
+@use "./partials/mixins" as *;
+
+// first we give our main divs different colors
+//we start with layouting format
+// we will create a mixin
+
+.top{
+    @include display;
+    grid-template-columns: 730px 350px;
+    // we start layouting this grid scss give us powers to nest css
+    gap: 2em;
+    margin-top: 2.8em;
+    @include responsiveness(375px){
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        gap: 0;
+    }
+    .left{
+        display:flex ;
+        flex-direction: column;
+        margin-bottom: 3em;
+     
+        .img{
+            height:300px ;
+            background-image: url("../assets/images/image-web-3-desktop.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            @include responsiveness(375px){
+            background-image: url("../assets/images/image-web-3-mobile.jpg");
+            }
+
+        }
+        .info{
+            // we can use flex or grid lets use flex
+            @include dispflex;
+            gap: 2em;
+            margin-top: 2em;
+            @include responsiveness(375px) {
+                flex-direction: column;
+            }
+            .text{
+                font-family: Inter-Extrabold;
+                width: 50%;
+                font-size: 1.8em;
+                line-height: 1;
+                transform: scale(.97888);
+                @include responsiveness(375px) {
+                    width: 100%;
+                }
+            } 
+            .details{
+                font-family: Inter-regular;
+                width:50%;
+                line-height: 1.55;
+                font-size: 15px;
+                display: flex;
+                color: $Darkgrayishblue;
+                flex-direction: column;
+                @include responsiveness(375px) {
+                        width: 100%;
+                    }
+                a{
+                    width: fit-content;
+                    margin-top: 2.9em;
+                    background: $Softred;
+                    padding: .7em 2.5em;
+                    color: #fff;
+                    font-size: 14px;
+                    letter-spacing: 3.5px;
+                    text-transform: uppercase;
+                    font-family: Inter-bold;
+                    
+                    &:hover{
+                        background: $Verydarkblue;
+                    }
+                }
+            }
+            
+        }
+    }
+    .right{
+        background: $Verydarkblue;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2em;
+        padding:1.8em 1.5em ;
+        .new{
+            color: $Softrange;
+            font-family: Inter-bold;
+            font-size: 2.5em;
+            margin-bottom: .3em;
+        }
+        .right:nth-child(4){
+            border: 0;
+        }
+       .cards{
+            display: flex;
+            flex-direction: column;
+            gap: 2.4em;
+
+        .more {
+                color: $Off-white;
+                border-bottom: 1px solid $Off-white;
+        
+                h1 {
+                    font-family: Inter-regular;
+                    font-size: 1.27em;
+                    letter-spacing: .234px;
+                    line-height: 1;
+                    margin-bottom: .5em;
+                    cursor: pointer;
+                    
+                    a{
+                        color: $Off-white;
+                        &:hover {
+                                color: $Softrange;
+                            }
+                    }
+
+
+                  
+
+                }
+        
+                p {
+                    color: $Grayishblue;
+                    font-family: Inter-regular;
+                    line-height: 1.7;
+                    font-size: 15px;
+                    @include responsiveness(375px) {
+                        line-height: 1.7;
+                        font-size: 14px;
+                    }
+                    // padding-left: 1rem
+                }
+            }
+            .first{
+                margin-top:-3px;
+                padding-bottom: 1.9em;
+            }
+            .mid{
+                margin-top: -.4em;
+                padding-bottom: 1.85em;
+            }
+            .last{
+                margin-top: -.4em;
+                padding-bottom: .1em;
+                h1{
+                    margin-bottom: .6em;
+                }
+                border-bottom: 0;
+            }
+       }
+    }
+}
+.bottom{
+    @include display;
+    grid-template-columns: repeat(3,.5fr);
+    @include responsiveness(375px){
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        gap: 2em;
+    }
+    margin-top: 1.8em;
+    gap: 1.6em;
+    .card{
+        display: grid;
+        grid-template-columns: 100px 230px;
+        gap: 1.5em;
+      
+
+    &__image {
+        background: #000;
+        height: 100px;
+            img{
+                object-fit: cover;
+                width: 100%;
+
+            }
+        }
+        &__info{
+            h1{
+                color:$Grayishblue;
+                font-family: Inter-bold;
+
+
+                
+
+            }
+            h2 a{
+                color:$Verydarkblue;
+                font-family: Inter-bold;
+                font-size: 18px;
+                margin-top: .3em;
+                padding-bottom: 1em;
+                &:hover {
+                        color: $Softred;
+                    }
+            }
+            p{
+                padding-top: .7em;
+                font-size: 15px;
+                color:$Darkgrayishblue;
+                font-family: Inter-regular;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+    
