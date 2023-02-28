@@ -29,6 +29,7 @@
 ul{
     position: relative;
     top: -20px;
+    // overflow-x: hidden;
     display: flex;
     flex-direction: row;
     gap: 2.4em;
@@ -73,7 +74,7 @@ ul{
          z-index: 1000;
          width: 400px;
          left: 40px;
-         transform: translateX(200%);
+         transform: translateX(-200%);
          transition: transform 1s ease-out;
 
          li {

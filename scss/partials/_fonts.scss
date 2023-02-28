@@ -2,23 +2,23 @@
 @font-face {
     // bold
     font-family: Inter-bold;
-    src: url("../assets/fonts/static/Inter-Bold.ttf");
+    src: url("../assets/fonts/static/Inter-Bold.ttf") format('truetype');
    
 }
 @font-face {
 // The extraBold
     font-family: Inter-Extrabold;
-    src: url("../assets/fonts/static/Inter-ExtraBold.ttf");
+    src: url("../assets/fonts/static/Inter-ExtraBold.ttf") format('truetype');
   
 }
 @font-face {
     // importing the regular font
         font-family: Inter-regular;
-        src: url("../assets/fonts/static/Inter-regular.ttf");
+        src: url("../assets/fonts/static/Inter-regular.ttf") format('truetype');
 }
 @font-face {
     // importing the regular font
     font-family: Merri;
-    src: url("../assets/fonts/static/Merriweather-Black.ttf");
+    src: url("../assets/fonts/static/Merriweather-Black.ttf") format('truetype');
 }
 // lets see if we can use them  to test we willuse the extarBold
