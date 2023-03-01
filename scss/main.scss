@@ -6,7 +6,12 @@
 // first we give our main divs different colors
 //we start with layouting format
 // we will create a mixin
-
+main{
+    @include responsiveness(375px){
+        width: min-content;
+        overflow-x: hidden;
+    }
+}
 .top{
     @include display;
     grid-template-columns: 730px 350px;
@@ -22,6 +27,7 @@
         display:flex ;
         flex-direction: column;
         margin-bottom: 3em;
+        width: fit-content;
      
         .img{
             height:300px ;
@@ -30,6 +36,7 @@
             background-position: center;
             background-repeat: no-repeat;
             @include responsiveness(375px){
+            width: 95%;
             background-image: url("../assets/images/image-web-3-mobile.jpg");
             }
 
@@ -43,17 +50,16 @@
                 flex-direction: column;
             }
             .text{
-                font-family: Inter-Extrabold;
+                font-family: 'Inter-Extrabold';
                 width: 50%;
                 font-size: 1.8em;
                 line-height: 1;
-                transform: scale(.97888);
                 @include responsiveness(375px) {
                     width: 100%;
                 }
             } 
             .details{
-                font-family: Inter-regular;
+                font-family: 'Inter-regular';
                 width:50%;
                 line-height: 1.55;
                 font-size: 15px;
@@ -72,7 +78,7 @@
                     font-size: 14px;
                     letter-spacing: 3.5px;
                     text-transform: uppercase;
-                    font-family: Inter-bold;
+                    font-family:'Inter-bold';
                     
                     &:hover{
                         background: $Verydarkblue;
@@ -88,15 +94,14 @@
         display: flex;
         flex-direction: column;
         gap: 1.2em;
-        padding:1.8em 1.5em ;
+        padding:1.2em 1.5em ;
+        width: fit-content;
+        padding-right: 2.2em;
         .new{
             color: $Softrange;
-            font-family: Inter-bold;
+            font-family:'Inter-bold';
             font-size: 2.5em;
             margin-bottom: .3em;
-        }
-        .right:nth-child(4){
-            border: 0;
         }
        .cards{
             display: flex;
@@ -108,8 +113,8 @@
                 border-bottom: 1px solid $Off-white;
         
                 h1 {
-                    font-family: Inter-regular;
-                    font-size: 1.27em;
+                    font-family: 'Inter-bold';
+                    font-size: 1.22em;
                     letter-spacing: .234px;
                     line-height: 1;
                     margin-bottom: .5em;
@@ -129,8 +134,8 @@
         
                 p {
                     color: $Grayishblue;
-                    font-family: Inter-regular;
-                    line-height: 1.7;
+                    font-family:'Inter-regular';
+                    line-height: 1.8;
                     font-size: 15px;
                     @include responsiveness(375px) {
                         line-height: 1.7;
@@ -145,11 +150,11 @@
             }
             .mid{
                 margin-top: -.4em;
-                padding-bottom: 1.85em;
+                padding-bottom:1.78em;
             }
             .last{
                 margin-top: -.4em;
-                padding-bottom: .1em;
+                padding-bottom: .7em;
                 h1{
                     margin-bottom: .6em;
                 }
@@ -160,6 +165,7 @@
 }
 .bottom{
     @include display;
+    padding-bottom: 3em;
     grid-template-columns: repeat(3,.5fr);
     @include responsiveness(375px){
         grid-template-columns: 1fr;
@@ -171,7 +177,11 @@
     .card{
         display: grid;
         grid-template-columns: 100px 230px;
-        gap: 1.5em;
+       gap: 1.5em;
+        @include responsiveness(375px) {
+            grid-template-columns: 100px auto;
+            gap: 1em;
+        }
       
 
     &__image {
@@ -184,9 +194,10 @@
             }
         }
         &__info{
+            margin-top: -8px;
             h1{
                 color:$Grayishblue;
-                font-family: Inter-bold;
+                font-family: 'Inter-bold';
 
 
                 
@@ -194,10 +205,13 @@
             }
             h2 a{
                 color:$Verydarkblue;
-                font-family: Inter-bold;
+                font-family: 'Inter-Extrabold';
                 font-size: 18px;
                 margin-top: .3em;
                 padding-bottom: 1em;
+                @include responsiveness(375px) {
+                    font-size: 15px;
+                }
                 &:hover {
                         color: $Softred;
                     }
@@ -206,8 +220,11 @@
                 padding-top: .7em;
                 font-size: 15px;
                 color:$Darkgrayishblue;
-                font-family: Inter-regular;
+                font-family: 'Inter-regular';
                 line-height: 1.6;
+                @include responsiveness(375px) {
+                    font-size: 14px;
+                }
             }
         }
     }

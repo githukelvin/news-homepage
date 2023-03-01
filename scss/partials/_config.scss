@@ -20,6 +20,11 @@ body {
 //    Just use max-width
     // We can use  this or  we achieve the same
     margin-inline:auto;
+    @include responsiveness(375px) {
+        max-width: 100%;
+        width: 100%;
+        margin-inline: auto;
+}
 }
 // lets use a global variable
 .all{
@@ -31,6 +36,6 @@ body {
     @include responsiveness(375px) {
         padding-inline: 0;
         width: 94%;
-    margin-inline: auto;
+        margin-inline: auto;
         }
 }

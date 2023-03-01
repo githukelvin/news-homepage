@@ -1,24 +1,23 @@
 @font-face {
-  font-family: Inter-bold;
-  src: url("../assets/fonts/inter-variablefont_slntwght-webfont.woff2") format("woff2"), url("../assets/fonts/inter-variablefont_slntwght-webfont.woff") format("woff");
+  font-family: "Inter-bold";
+  src: url("../assets/fonts/static/MyFontBold.woff2") format("woff2"), url("../assets/fonts/static/MyFontBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter-Extrabold";
+  src: url("../assets/fonts/static/MyFontExtraBold.woff2") format("woff2"), url("../assets/fonts/static/MyFontExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: Inter-Extrabold;
-  src: url("../assets/fonts/inter-variablefont_slntwght-webfont.woff2") format("woff2-variations"), url("../assets/fonts/inter-variablefont_slntwght-webfont.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: Inter-regular;
-  src: url("../assets/fonts/inter-variablefont_slntwght-webfont.woff2") format("woff2"), url("../assets/fonts/inter-variablefont_slntwght-webfont.woff") format("woff");
+  font-family: "Inter-regular";
+  src: url("../assets/fonts/static/MyFontRegular.woff2") format("woff2"), url("../assets/fonts/static/MyFontRegular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-}
-@font-face {
-  font-family: Merri;
-  src: url("../assets/fonts/inter-variablefont_slntwght-webfont.woff2") format("woff2"), url("../assets/fonts/inter-variablefont_slntwght-webfont.woff") format("woff");
+  font-display: swap;
 }
 * {
   margin: 0;
@@ -37,6 +36,13 @@ body {
 .container {
   max-width: 1440px;
   margin-inline: auto;
+}
+@media screen and (max-width: 375px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+    margin-inline: auto;
+  }
 }
 
 .all {
@@ -65,6 +71,7 @@ body {
     flex-direction: row;
     align-items: center;
     height: 80px;
+    width: 85%;
   }
 }
 .navBar .logo {
@@ -161,6 +168,13 @@ body.active {
   display: block;
 }
 
+@media screen and (max-width: 375px) {
+  main {
+    width: min-content;
+    overflow-x: hidden;
+  }
+}
+
 .top {
   display: grid;
   grid-auto-flow: column;
@@ -179,6 +193,7 @@ body.active {
   display: flex;
   flex-direction: column;
   margin-bottom: 3em;
+  width: fit-content;
 }
 .top .left .img {
   height: 300px;
@@ -189,6 +204,7 @@ body.active {
 }
 @media screen and (max-width: 375px) {
   .top .left .img {
+    width: 95%;
     background-image: url("../assets/images/image-web-3-mobile.jpg");
   }
 }
@@ -204,11 +220,10 @@ body.active {
   }
 }
 .top .left .info .text {
-  font-family: Inter-Extrabold;
+  font-family: "Inter-Extrabold";
   width: 50%;
   font-size: 1.8em;
   line-height: 1;
-  transform: scale(0.97888);
 }
 @media screen and (max-width: 375px) {
   .top .left .info .text {
@@ -216,7 +231,7 @@ body.active {
   }
 }
 .top .left .info .details {
-  font-family: Inter-regular;
+  font-family: "Inter-regular";
   width: 50%;
   line-height: 1.55;
   font-size: 15px;
@@ -238,7 +253,7 @@ body.active {
   font-size: 14px;
   letter-spacing: 3.5px;
   text-transform: uppercase;
-  font-family: Inter-bold;
+  font-family: "Inter-bold";
 }
 .top .left .info .details a:hover {
   background: hsl(240, 100%, 5%);
@@ -249,16 +264,15 @@ body.active {
   display: flex;
   flex-direction: column;
   gap: 1.2em;
-  padding: 1.8em 1.5em;
+  padding: 1.2em 1.5em;
+  width: fit-content;
+  padding-right: 2.2em;
 }
 .top .right .new {
   color: hsl(35, 77%, 62%);
-  font-family: Inter-bold;
+  font-family: "Inter-bold";
   font-size: 2.5em;
   margin-bottom: 0.3em;
-}
-.top .right .right:nth-child(4) {
-  border: 0;
 }
 .top .right .cards {
   display: flex;
@@ -270,8 +284,8 @@ body.active {
   border-bottom: 1px solid hsl(36, 100%, 99%);
 }
 .top .right .cards .more h1 {
-  font-family: Inter-regular;
-  font-size: 1.27em;
+  font-family: "Inter-bold";
+  font-size: 1.22em;
   letter-spacing: 0.234px;
   line-height: 1;
   margin-bottom: 0.5em;
@@ -285,8 +299,8 @@ body.active {
 }
 .top .right .cards .more p {
   color: hsl(233, 8%, 79%);
-  font-family: Inter-regular;
-  line-height: 1.7;
+  font-family: "Inter-regular";
+  line-height: 1.8;
   font-size: 15px;
 }
 @media screen and (max-width: 375px) {
@@ -301,11 +315,11 @@ body.active {
 }
 .top .right .cards .mid {
   margin-top: -0.4em;
-  padding-bottom: 1.85em;
+  padding-bottom: 1.78em;
 }
 .top .right .cards .last {
   margin-top: -0.4em;
-  padding-bottom: 0.1em;
+  padding-bottom: 0.7em;
   border-bottom: 0;
 }
 .top .right .cards .last h1 {
@@ -315,6 +329,7 @@ body.active {
 .bottom {
   display: grid;
   grid-auto-flow: column;
+  padding-bottom: 3em;
   grid-template-columns: repeat(3, 0.5fr);
   margin-top: 1.8em;
   gap: 1.6em;
@@ -331,6 +346,12 @@ body.active {
   grid-template-columns: 100px 230px;
   gap: 1.5em;
 }
+@media screen and (max-width: 375px) {
+  .bottom .card {
+    grid-template-columns: 100px auto;
+    gap: 1em;
+  }
+}
 .bottom .card__image {
   background: #000;
   height: 100px;
@@ -339,16 +360,24 @@ body.active {
   object-fit: cover;
   width: 100%;
 }
+.bottom .card__info {
+  margin-top: -8px;
+}
 .bottom .card__info h1 {
   color: hsl(233, 8%, 79%);
-  font-family: Inter-bold;
+  font-family: "Inter-bold";
 }
 .bottom .card__info h2 a {
   color: hsl(240, 100%, 5%);
-  font-family: Inter-bold;
+  font-family: "Inter-Extrabold";
   font-size: 18px;
   margin-top: 0.3em;
   padding-bottom: 1em;
+}
+@media screen and (max-width: 375px) {
+  .bottom .card__info h2 a {
+    font-size: 15px;
+  }
 }
 .bottom .card__info h2 a:hover {
   color: hsl(5, 85%, 63%);
@@ -357,6 +386,11 @@ body.active {
   padding-top: 0.7em;
   font-size: 15px;
   color: hsl(236, 13%, 42%);
-  font-family: Inter-regular;
+  font-family: "Inter-regular";
   line-height: 1.6;
+}
+@media screen and (max-width: 375px) {
+  .bottom .card__info p {
+    font-size: 14px;
+  }
 }/*# sourceMappingURL=main.css.map */
